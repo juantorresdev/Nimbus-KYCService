@@ -2,6 +2,9 @@ package com.nimbus.kyc.KYCService.controller;
 
 import com.nimbus.kyc.KYCService.service.KycService;
 import com.nimbus.kyc.KYCService.wrapper.request.PhoneRequest;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class KycRegistrerController {
 
     private KycService kycService;
+    private static final Logger logger = LoggerFactory.getLogger(KycRegistrerController.class);
 
     public KycRegistrerController(KycService kycService) {
         this.kycService = kycService;
@@ -19,6 +23,8 @@ public class KycRegistrerController {
 
     @PostMapping("/getPhoneNumber")
     public ResponseEntity<String> getPhoneNumber(@RequestBody PhoneRequest phoneRequest) {
+
+        logger.info("getPhoneNumber");
 
         if(phoneRequest != null) {
             kycService.phoneValidation(phoneRequest);
