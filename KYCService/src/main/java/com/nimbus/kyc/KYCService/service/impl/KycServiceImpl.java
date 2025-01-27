@@ -15,4 +15,54 @@ public class KycServiceImpl implements KycService {
     public void phoneOTPValidation() {
 
     }
+
+    @Override
+    public void emailValidation() {
+
+    }
+
+    @Override
+    public void emailOTPValidation() {
+
+    }
+
+    @Override
+    public void idPicValidation() {
+
+    }
+
+    @Override
+    public void curpValidation() {
+
+    }
+
+    @Override
+    public void homonimiaValidation() {
+
+    }
+
+    @Override
+    public void zipCodeValidation() {
+
+    }
+
+    @Override
+    public void addressValidation() {
+
+    }
+
+    @Override
+    public void addressLocationValidation() {
+
+    }
+
+    @Override
+    public void signatureValidation() {
+
+    }
+
+    @Override
+    public void selfieValidation() {
+
+    }
 }
