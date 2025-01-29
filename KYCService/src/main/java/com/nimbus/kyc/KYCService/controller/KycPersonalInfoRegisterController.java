@@ -1,6 +1,6 @@
 package com.nimbus.kyc.KYCService.controller;
 
-import com.nimbus.kyc.KYCService.service.KycService;
+import com.nimbus.kyc.KYCService.service.KycPersonalInfoRegisterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("persona-validation")
 public class KycPersonalInfoRegisterController {
 
-    private KycService kycService;
+    private final KycPersonalInfoRegisterService kycPersonalInfoRegisterService;
     private static final Logger logger = LoggerFactory.getLogger(KycPersonalInfoRegisterController.class);
 
-    public KycPersonalInfoRegisterController(KycService kycService) {
-        this.kycService = kycService;
+    public KycPersonalInfoRegisterController(KycPersonalInfoRegisterService kycPersonalInfoRegisterService) {
+        this.kycPersonalInfoRegisterService = kycPersonalInfoRegisterService;
     }
 
     @PostMapping("/idpic")
