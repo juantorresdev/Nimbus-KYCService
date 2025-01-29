@@ -1,6 +1,6 @@
 package com.nimbus.kyc.KYCService.controller;
 
-import com.nimbus.kyc.KYCService.service.KycService;
+import com.nimbus.kyc.KYCService.service.KycEmailRegisterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("email-validation")
 public class KycEmailRegisterController {
 
-    private KycService kycService;
+    private final KycEmailRegisterService emailRegisterService;
     private static final Logger logger = LoggerFactory.getLogger(KycEmailRegisterController.class);
 
-    public KycEmailRegisterController(KycService kycService) {
-        this.kycService = kycService;
+    public KycEmailRegisterController(KycEmailRegisterService emailRegisterService) {
+        this.emailRegisterService = emailRegisterService;
     }
 
     @PostMapping("/email")
