@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("address-validation")
+@RestController("kyc-address")
 public class KycAddressRegisterController {
 
     private final KycEmailRegisterService KycEmailRegisterService;

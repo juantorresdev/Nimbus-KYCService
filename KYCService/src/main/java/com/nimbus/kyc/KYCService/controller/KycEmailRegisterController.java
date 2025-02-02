@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("email-validation")
+@RestController("kyc-email")
 public class KycEmailRegisterController {
 
     private final KycEmailRegisterService emailRegisterService;
@@ -30,14 +30,6 @@ public class KycEmailRegisterController {
     public ResponseEntity<String> validateOTPEmail() {
 
         logger.info("otp-email Endpoint");
-
-        return ResponseEntity.ok("OK");
-    }
-
-    @PutMapping("/email")
-    public ResponseEntity<String> updateEmail() {
-
-        logger.info("update email Endpoint");
 
         return ResponseEntity.ok("OK");
     }

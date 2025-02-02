@@ -2,6 +2,7 @@ package enumerate;
 
 public enum State {
     NONE,
+    TOKEN_GENERATED,
     PHONE_RECEIVED,
     PHONE_OTP_VALIDATED,
     EMAIL_RECEIVED,
