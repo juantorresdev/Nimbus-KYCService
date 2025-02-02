@@ -7,11 +7,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("phone-validation")
+@RestController("kyc-phone")
 public class KycPhoneRegisterController {
 
     private final KycPhoneRegisterService kycPhoneRegisterService;
@@ -43,17 +42,4 @@ public class KycPhoneRegisterController {
         return ResponseEntity.ok("OK");
     }
 
-    @PutMapping("/phone-number")
-    public ResponseEntity<String> updatePhoneNumber(@RequestBody PhoneRequest phoneRequest) {
-
-        logger.info("phone-number Endpoint");
-
-        if(phoneRequest != null) {
-            kycPhoneRegisterService.phoneValidation(phoneRequest);
-        }
-        else {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
-        return ResponseEntity.ok("OK");
-    }
 }

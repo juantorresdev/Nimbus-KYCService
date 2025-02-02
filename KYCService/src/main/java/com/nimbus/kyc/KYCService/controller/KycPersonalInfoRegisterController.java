@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("persona-validation")
+@RestController("kyc-persona")
 public class KycPersonalInfoRegisterController {
 
     private final KycPersonalInfoRegisterService kycPersonalInfoRegisterService;
